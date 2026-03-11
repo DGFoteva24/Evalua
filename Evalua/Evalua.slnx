@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path="Evalua/main.cpp" />
+  </Folder>
+  <Project Path="Evalua/Evalua.vcxproj" Id="37c22a94-f289-44be-8ccf-b8529c4f6839" />
+</Solution>
