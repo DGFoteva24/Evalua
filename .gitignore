@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # User-specific files
 *.rsuser
 *.suo
@@ -163,3 +164,31 @@ buildtrees/
 conanbuildinfo.*
 conaninfo.txt
 .conan/
+=======
+.vs/
+*.VC.db
+*.VC.opendb
+
+Debug/
+Release/
+x64/
+x86/
+build/
+
+*.exe
+*.out
+*.obj
+*.o
+*.dll
+*.lib
+*.pdb
+
+*.user
+*.suo
+*.opensdf
+
+*.log
+
+.DS_Store
+Thumbs.db
+>>>>>>> 09a511c91ca56bb9c8db4812892040defdc3fb80
