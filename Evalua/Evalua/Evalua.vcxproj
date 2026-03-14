@@ -22,20 +22,30 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\aboutUs.cpp" />
     <ClCompile Include="src\account.cpp" />
+    <ClCompile Include="src\algebra.cpp" />
+    <ClCompile Include="src\calculus.cpp" />
+    <ClCompile Include="src\combinatorics.cpp" />
     <ClCompile Include="src\firstMenu.cpp" />
+    <ClCompile Include="src\geometry.cpp" />
     <ClCompile Include="src\menu.cpp" />
     <ClCompile Include="src\statistics.cpp" />
     <ClCompile Include="src\study.cpp" />
     <ClCompile Include="src\test.cpp" />
+    <ClCompile Include="src\trigonometry.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\aboutUs.h" />
     <ClInclude Include="include\account.h" />
+    <ClInclude Include="include\algebra.h" />
+    <ClInclude Include="include\calculus.h" />
+    <ClInclude Include="include\combinatorics.h" />
     <ClInclude Include="include\firstMenu.h" />
+    <ClInclude Include="include\geometry.h" />
     <ClInclude Include="include\menu.h" />
     <ClInclude Include="include\statistics.h" />
     <ClInclude Include="include\study.h" />
     <ClInclude Include="include\test.h" />
+    <ClInclude Include="include\trigonometry.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>

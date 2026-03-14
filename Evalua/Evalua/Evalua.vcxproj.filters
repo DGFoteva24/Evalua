@@ -39,6 +39,21 @@
     <ClCompile Include="src\test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\trigonometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\geometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\algebra.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\calculus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\combinatorics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\menu.h">
@@ -60,6 +75,21 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="include\test.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\trigonometry.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\geometry.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\algebra.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\calculus.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\combinatorics.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
