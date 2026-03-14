@@ -54,9 +54,10 @@ void study() {
     case 4: clearScreen(); calculus(); break;
     case 5: clearScreen(); combinatorics(); break;
     default:
-        cout << "Please pick a number! (1-5)" << endl;
+        clearScreen();
+        cout << SKYBLUE << "Please pick a number! (1-5)" << endl << endl << RESET;
+        study();
         break;
-        
     }
 }
 

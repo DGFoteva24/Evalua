@@ -45,13 +45,15 @@ void mainMenu() {
     case 4: clearScreen(); firstMenu(); break;
     case 5: clearScreen(); exitProgram(); break;
     default:
-        cout << "Please pick a number! (1-5)" << endl;
+        clearScreen();
+        cout << SKYBLUE << "Please pick a number! (1-5)" << endl << endl << RESET;
+        mainMenu();
         break;
     }
 }
 
 void exitProgram() {
-    cout << "Exiting the program. Goodbye!" << endl;
+    cout << LAVANDER << "Exiting the program. Goodbye!" << endl << RESET;
     exit(0);
 }
 

@@ -54,6 +54,9 @@
     <ClCompile Include="src\combinatorics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\question.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\menu.h">
@@ -90,6 +93,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="include\combinatorics.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\question.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
