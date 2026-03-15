@@ -1,8 +1,8 @@
 #include <iostream>
-#include "include/menu.h"
+#include "include/firstMenu.h"
 using namespace std;
 
 int main() {
-	mainMenu();
+	firstMenu();
 	return 0;
 }

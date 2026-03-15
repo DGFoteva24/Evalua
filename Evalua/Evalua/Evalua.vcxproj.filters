@@ -57,6 +57,12 @@
     <ClCompile Include="src\question.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\logIn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\signUp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\menu.h">
@@ -98,5 +104,14 @@
     <ClInclude Include="include\question.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\logIn.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\signUp.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\users.txt" />
   </ItemGroup>
 </Project>

@@ -2,3 +2,5 @@
 #include <iostream>
 
 void firstMenu();
+void empty();
+void clearScreen();

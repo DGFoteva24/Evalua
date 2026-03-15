@@ -27,8 +27,10 @@
     <ClCompile Include="src\combinatorics.cpp" />
     <ClCompile Include="src\firstMenu.cpp" />
     <ClCompile Include="src\geometry.cpp" />
+    <ClCompile Include="src\logIn.cpp" />
     <ClCompile Include="src\menu.cpp" />
     <ClCompile Include="src\question.cpp" />
+    <ClCompile Include="src\signUp.cpp" />
     <ClCompile Include="src\statistics.cpp" />
     <ClCompile Include="src\study.cpp" />
     <ClCompile Include="src\test.cpp" />
@@ -42,12 +44,17 @@
     <ClInclude Include="include\combinatorics.h" />
     <ClInclude Include="include\firstMenu.h" />
     <ClInclude Include="include\geometry.h" />
+    <ClInclude Include="include\logIn.h" />
     <ClInclude Include="include\menu.h" />
     <ClInclude Include="include\question.h" />
+    <ClInclude Include="include\signUp.h" />
     <ClInclude Include="include\statistics.h" />
     <ClInclude Include="include\study.h" />
     <ClInclude Include="include\test.h" />
     <ClInclude Include="include\trigonometry.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\users.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
