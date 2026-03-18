@@ -17,7 +17,7 @@ void exitProgram();
 
 void mainMenu() {
     cout << LAVANDER << "+---------------------------------------+" << RESET << endl;
-    cout << SKYBLUE << "|           Welcome to Evalua!          |" << RESET << endl;
+    cout << LAVANDER << "|" << SKYBLUE << "           Welcome to Evalua!          " << LAVANDER << "|" << RESET << endl;
     cout << LAVANDER << "+---------------------------------------+" << RESET << endl;
 
     cout << endl;
