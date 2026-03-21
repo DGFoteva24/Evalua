@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <conio.h>
 #include "../include/calculus.h"
 #include "../include/study.h"
 
@@ -57,12 +58,10 @@ int(6x + 5) dx = 3x^2 + 5x + C
 
     cout << content;
 
-    cout << LAVANDER << "Press 0 to go back: " << RESET;
-
-    int choice;
-    cin >> choice;
-
-    if (choice == 0) {
+    cout << LAVANDER << "Press Enter to go back: " << RESET;
+    char ch = _getch();
+    cout << ch << endl;
+    if (ch == '\r' || ch == '\n') {
         clearScreen();
         study();
     }

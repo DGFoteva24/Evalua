@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <conio.h>
 #include "../include/combinatorics.h"
 #include "../include/study.h"
 
@@ -56,12 +57,10 @@ How many ways to choose 3 books out of 5?
 
     cout << content;
 
-    cout << LAVANDER << "Press 0 to go back: " << RESET;
-
-    int choice;
-    cin >> choice;
-
-    if (choice == 0) {
+    cout << LAVANDER << "Press Enter to go back: " << RESET;
+    char ch = _getch();
+    cout << ch << endl;
+    if (ch == '\r' || ch == '\n') {
         clearScreen();
         study();
     }

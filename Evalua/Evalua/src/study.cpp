@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <conio.h>
 #include "../include/study.h"
 #include "../include/test.h"
 #include "../include/statistics.h"
@@ -12,10 +13,6 @@
 #include "../include/calculus.h"
 #include "../include/combinatorics.h"
 
-
-
-
-
 using namespace std;
 
 #define RESET "\033[0m"
@@ -23,28 +20,36 @@ using namespace std;
 #define SKYBLUE "\033[38;5;117m"
 
 void study() {
-    cout << LAVANDER << " _________________________________________________________________ " << endl;
-    cout << "|                                ||                               |" << endl;
-    cout << "|             " << SKYBLUE << "Evalua" << LAVANDER << "             ||           " << SKYBLUE << "TABLE OF" << LAVANDER << "            |" << endl;
-    cout << "|       Online Coursebook        ||           " << SKYBLUE << "CONTENTS" << LAVANDER << "            |" << endl;
-    cout << "|          Mathematics           ||                               |" << endl;
-    cout << "|           9th Grade            ||      1. Trigonometry          |" << endl;
-    cout << "|                                ||      2. Geometry              |" << endl;
-    cout << "|                                ||      3. Algebra               |" << endl;
-    cout << "|                                ||      4. Calculus              |" << endl;
-    cout << "|                                ||      5. Combinatorics         |" << endl;
+    cout << LAVANDER
+        << "     __________________   __________________\n"
+        << " .-/|                  \\ /                  |\\-.\n"
+        << " ||||      EVALUA       |                   ||||\n"
+        << " ||||                   |  " << SKYBLUE << "1." << LAVANDER << " Trigonometry  ||||\n"
+        << " ||||                   |                   ||||\n"
+        << " |||| Online Coursebook |  " << SKYBLUE << "2." << LAVANDER << " Geometry      ||||\n"
+        << " ||||                   |                   ||||\n"
+        << " ||||    ";
+    cout << SKYBLUE << "Mathematics" << LAVANDER << "    |  " << SKYBLUE << "3." << LAVANDER << " Algebra       ||||\n"
+        << " ||||                   |                   ||||\n"
+        << " ||||                   |  " << SKYBLUE << "4." << LAVANDER << " Calculus      ||||\n"
+        << " ||||     ";
+    cout << SKYBLUE << "9th Grade" << LAVANDER << "     |                   ||||\n"
+        << " ||||                   |  " << SKYBLUE << "5." << LAVANDER << " Combinatorics ||||\n"
+        << " ||||                   |                   ||||\n"
+        << " ||||         " << SKYBLUE << "1" << LAVANDER << "         |         " << SKYBLUE << "2" << LAVANDER << "         ||||\n"
+        << " ||||__________________ | __________________||||\n"
+        << " || /= ===============\\ | /= ===============\\ ||\n"
+        << " `--------------------~___~-------------------''\n"
+        << RESET << "\n";
 
-    for (int i = 0; i < 6; i++) {
-        cout << "|                                ||                               |" << endl;
+    cout << "\n" << LAVANDER << "Enter a chapter number to read, or press Enter to go back: " << RESET;
+
+    int choice = readNumericChoice();
+    if (choice == -2) {
+        clearScreen();
+        mainMenu();
+        return;
     }
-
-    cout << "|               0                ||               1               |" << endl;
-    cout << "|________________________________||_______________________________|" << RESET << endl;
-
-    cout << "\n" << LAVANDER << "Enter a chapter number to read, or " << SKYBLUE << "0" << LAVANDER << " to go back: " << RESET;
-   
-    int choice;
-    cin >> choice;
 
     switch (choice) {
     case 0: clearScreen(); mainMenu(); break;
@@ -61,4 +66,4 @@ void study() {
     }
 }
 
-  
+

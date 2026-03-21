@@ -87,7 +87,7 @@ vector<Question> getQuestionBank() {
     addQuestion(bank, "Derivative of x ln(x)?", "ln(x) + 1", "x/x", "1/x", "x ln(x)", 0, "Calculus", 25);
     addQuestion(bank, "Integral of cos(2x) dx?", "sin(2x) + C", "1/2 sin(2x) + C", "2sin(x) + C", "cos(x) + C", 1, "Calculus", 25);
 
-	// COMBINATORICS
+    // COMBINATORICS
     addQuestion(bank, "How many permutations of 3 distinct objects exist?", "3", "6", "9", "12", 1, "Combinatorics", 10);
     addQuestion(bank, "How many subsets does a set of size 4 have?", "4", "8", "12", "16", 3, "Combinatorics", 15);
     addQuestion(bank, "What is 5! ?", "60", "100", "120", "20", 2, "Combinatorics", 15);
@@ -119,7 +119,7 @@ vector<Question> getQuestionBank() {
     addQuestion(bank, "C(12,2) equals?", "66", "72", "132", "24", 0, "Combinatorics", 15);
     addQuestion(bank, "How many permutations of the word LEVEL?", "60", "120", "30", "20", 2, "Combinatorics", 30);
 
-	// GEOMETRY
+    // GEOMETRY
     addQuestion(bank, "Sum of angles in a triangle?", "90°", "180°", "270°", "360°", 1, "Geometry", 10);
     addQuestion(bank, "Area of a circle?", "πr", "2πr", "πr^2", "r^2", 2, "Geometry", 15);
     addQuestion(bank, "Perimeter of a square with side s?", "s^2", "4s", "2s", "8s", 1, "Geometry", 10);

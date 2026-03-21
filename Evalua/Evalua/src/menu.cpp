@@ -1,10 +1,12 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <conio.h>
 #include "../include/study.h"
 #include "../include/test.h"
 #include "../include/statistics.h"
 #include "../include/firstMenu.h"
+#include "../include/menu.h"
 
 using namespace std;
 
@@ -14,6 +16,17 @@ using namespace std;
 
 void clearScreen();
 void exitProgram();
+
+// Read a single key and return its numeric value (0-9), -2 for Enter, or -1 for other keys
+int readNumericChoice() {
+    char ch = _getch();
+    cout << ch << endl;
+    if (ch == '\r' || ch == '\n')
+        return -2;
+    if (ch >= '0' && ch <= '9')
+        return ch - '0';
+    return -1;
+}
 
 void mainMenu() {
     cout << LAVANDER << "+---------------------------------------+" << RESET << endl;
@@ -35,8 +48,7 @@ void mainMenu() {
 
     cout << LAVANDER << "Enter your choice: " << RESET;
 
-    int choice;
-    cin >> choice;
+    int choice = readNumericChoice();
 
     switch (choice) {
     case 1: clearScreen(); study(); break;

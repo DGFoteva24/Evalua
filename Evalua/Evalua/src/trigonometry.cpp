@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <conio.h>
 #include "../include/trigonometry.h"
 #include "../include/study.h"
 
@@ -9,8 +10,7 @@ using namespace std;
 #define LAVANDER "\033[38;5;183m"
 #define SKYBLUE "\033[38;5;117m"
 
-void clearScreen(); // declare the function
-
+void clearScreen();
 void trigonometry() {
 
     string content = string(LAVANDER) + R"(
@@ -39,12 +39,10 @@ R"(sin(x)^2 + cos(x)^2 = 1
 
     cout << content;
 
-    cout << LAVANDER << "\nPress 0 to go back: " << RESET;
-
-    int choice;
-    cin >> choice;
-
-    if (choice == 0) {
+    cout << LAVANDER << "\nPress Enter to go back: " << RESET;
+    char ch = _getch();
+    cout << ch << endl;
+    if (ch == '\r' || ch == '\n') {
         clearScreen();
         study();
     }

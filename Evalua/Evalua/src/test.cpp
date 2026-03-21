@@ -2,7 +2,9 @@
 #include <string>
 #include <algorithm>
 #include <random>
+#include <cctype>
 #include <windows.h>
+#include <conio.h>
 #include "../include/menu.h"
 #include "../include/question.h"
 #include "../include/test.h"
@@ -37,22 +39,31 @@ void runTest(vector<Question>& questions) {
 		cout << SKYBLUE << q.text << RESET << endl << endl;
 
 		for (int j = 0; j < 4; j++) {
-			cout << LAVANDER << (j + 1) << ". " << RESET
+			cout << LAVANDER << char('A' + j) << ". " << RESET
 				<< q.options[j] << endl;
 		}
 
-		cout << endl << SKYBLUE << "Your answer (1-4): " << RESET;
+		cout << endl << SKYBLUE << "Your answer (A-D or 1-4): " << RESET;
 
-		int answer;
-		while (!(cin >> answer) || answer < 1 || answer > 4) {
-			cin.clear();
-			cin.ignore(1000, '\n');
-			cout << RED << "Please enter a number between 1 and 4: " << RESET;
+		int selectedIndex;
+		while (true) {
+			char ch = _getch();
+			cout << ch << endl;
+			if (ch >= '1' && ch <= '4') {
+				selectedIndex = ch - '1';
+				break;
+			}
+			char up = toupper(static_cast<unsigned char>(ch));
+			if (up >= 'A' && up <= 'D') {
+				selectedIndex = up - 'A';
+				break;
+			}
+			cout << endl << RED << "Please select an option (A-D or 1-4): " << RESET;
 		}
 
 		maxScore += q.points;
 
-		if (answer - 1 == q.correctAnswer) {
+		if (selectedIndex == q.correctAnswer) {
 			cout << GREEN << "Correct! +" << q.points << " points" << RESET << endl;
 			score += q.points;
 		}
@@ -61,10 +72,11 @@ void runTest(vector<Question>& questions) {
 				<< q.options[q.correctAnswer] << RESET << endl;
 		}
 
-		// ── Wait for any key, then clear ──────────────────────────────────
 		cout << LAVANDER << "\nPress any key to continue..." << RESET;
-		cin.ignore(1000, '\n');
-		cin.get();
+		{
+			char _ch = _getch();
+			cout << _ch << endl;
+		}
 		clearScreen();
 	}
 
@@ -86,8 +98,10 @@ void runTest(vector<Question>& questions) {
 	cout << SKYBLUE << "Grade: " << grade << RESET << endl << endl;
 
 	cout << LAVANDER << "Press Enter to return to the menu..." << RESET;
-	cin.ignore(1000, '\n');
-	cin.get();
+	{
+		char _ch = _getch();
+		cout << _ch << endl;
+	}
 
 	clearScreen();
 	mainMenu();
@@ -107,19 +121,23 @@ void test() {
 		<< "5. Geometry Test" << endl
 		<< "6. Trigonometry Test" << RESET << endl << endl;
 
-	cout << LAVANDER << "Enter your choice or type 0 to go back: " << RESET;
+	cout << LAVANDER << "Enter your choice or press Enter to go back: " << RESET;
 
-	int choice;
-	cin >> choice;
+	int choice = readNumericChoice();
+
+	if (choice == -2) {
+		clearScreen();
+		mainMenu();
+		return;
+	}
 
 	switch (choice) {
-	case 1: clearScreen(); randomTest();       break;
-	case 2: clearScreen(); algebraTest();      break;
-	case 3: clearScreen(); calculusTest();     break;
+	case 1: clearScreen(); randomTest(); break;
+	case 2: clearScreen(); algebraTest(); break;
+	case 3: clearScreen(); calculusTest(); break;
 	case 4: clearScreen(); combinatoricsTest(); break;
-	case 5: clearScreen(); geometryTest();     break;
+	case 5: clearScreen(); geometryTest(); break;
 	case 6: clearScreen(); trigonometryTest(); break;
-	case 0: clearScreen(); mainMenu();         break;
 	default:
 		clearScreen();
 		cout << SKYBLUE << "Please pick a number! (1-6)" << endl << endl << RESET;

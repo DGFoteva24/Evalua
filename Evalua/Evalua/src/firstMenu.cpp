@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <conio.h>
 #include "../include/firstMenu.h"
+#include "../include/menu.h"
 #include "../include/signUp.h"
 #include "../include/logIn.h"
 #include "../include/aboutUs.h"
@@ -41,7 +43,7 @@ J________L  \\__//  J\____,__L J__L J\____,__L J\____,__L
         cout << endl;
 
         cout << LAVANDER << "Enter your choice: " << RESET;
-        cin >> choice;
+        choice = readNumericChoice();
 
         switch (choice) {
         case 1:
@@ -62,8 +64,10 @@ J________L  \\__//  J\____,__L J__L J\____,__L J\____,__L
             break;
         default:
             cout << SKYBLUE << "\nPlease pick a number! (1-4)\n\n" << RESET << "Press Enter to continue...";
-            cin.ignore();
-            cin.get();  // Wait for user to acknowledge
+            {
+                char _ch = _getch();
+                cout << _ch << endl;
+            }
             continue;
         }
     } while (choice != 4);

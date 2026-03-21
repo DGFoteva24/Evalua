@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <conio.h>
 #include "../include/geometry.h"
 #include "../include/study.h"
 
@@ -54,12 +55,10 @@ Area = 5 * 3 = 15
 
     cout << content;
 
-    cout << LAVANDER << "\nPress 0 to go back: " << RESET;
-
-    int choice;
-    cin >> choice;
-
-    if (choice == 0) {
+    cout << LAVANDER << "\nPress Enter to go back: " << RESET;
+    char ch = _getch();
+    cout << ch << endl;
+    if (ch == '\r' || ch == '\n') {
         clearScreen();
         study();
     }

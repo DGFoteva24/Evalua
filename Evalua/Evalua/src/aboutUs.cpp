@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <conio.h>
 #include "../include/firstMenu.h"
 
 using namespace std;
@@ -23,12 +24,10 @@ void aboutUs() {
 	cout << SKYBLUE << "Mariela Apostolova - 9b - Backend Developer" << RESET << endl;
 	cout << SKYBLUE << "Rosica Velkova - 9a - Quality Engineer" << RESET << endl;
 
-	cout << LAVANDER << "\nPress 0 to go back: " << RESET;
-
-	int choice;
-	cin >> choice;
-
-	if (choice == 0) {
+	cout << LAVANDER << "\nPress Enter to go back: " << RESET;
+	char ch = _getch();
+	cout << ch << endl;
+	if (ch == '\r' || ch == '\n') {
 		clearScreen();
 		firstMenu();
 	}

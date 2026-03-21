@@ -2,3 +2,4 @@
 #include <iostream>
 
 void mainMenu();
+int readNumericChoice();
