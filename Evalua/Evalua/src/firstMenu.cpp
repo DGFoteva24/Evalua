@@ -35,10 +35,10 @@ J________L  \\__//  J\____,__L J__L J\____,__L J\____,__L
         cout << LAVANDER << R"(Digital Learning Hub for Modern Education
 ---------------------------------------------------------)" << "\n\n";
 
-        cout << SKYBLUE << "1. Sign up" << RESET << endl;
-        cout << SKYBLUE << "2. Log in" << RESET << endl;
-        cout << SKYBLUE << "3. About us" << RESET << endl;
-        cout << SKYBLUE << "4. Exit" << RESET << endl;
+        cout << SKYBLUE << " 1. Sign up" << RESET << endl;
+        cout << SKYBLUE << " 2. Log in" << RESET << endl;
+        cout << SKYBLUE << " 3. About us" << RESET << endl;
+        cout << SKYBLUE << " 4. Exit" << RESET << endl;
 
         cout << endl;
 
@@ -63,7 +63,7 @@ J________L  \\__//  J\____,__L J__L J\____,__L J\____,__L
             exitProgram();
             break;
         default:
-            cout << SKYBLUE << "\nPlease pick a number! (1-4)\n\n" << RESET << "Press Enter to continue...";
+            cout << SKYBLUE << "\nPlease pick a number! (1-4)\n\n" << RESET << "Press Enter to return to the menu...";
             {
                 char _ch = _getch();
                 cout << _ch << endl;
@@ -73,7 +73,7 @@ J________L  \\__//  J\____,__L J__L J\____,__L J\____,__L
     } while (choice != 4);
 }
 void exitProgram() {
-    cout << "Exiting the program. Goodbye!" << endl;
+    cout << "Exiting the program. Goodbye!" << endl << endl;
     exit(0);
 }
 

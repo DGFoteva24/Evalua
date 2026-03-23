@@ -105,9 +105,10 @@ void statistics() {
 		}
 	}
 
-	cout << endl << LAVANDER << "Press Enter to return to the menu..." << RESET;
-	cin.ignore();
-	cin.get();
+    cout << endl << LAVANDER << "Press Enter to return to the menu..." << RESET;
+	// Use readNumericChoice() (which wraps _getch()) to wait for Enter or numeric input
+	int _ch = readNumericChoice();
+	(void)_ch; // ignore the value, we just wait for input
 	clearScreen();
 	mainMenu();
 }

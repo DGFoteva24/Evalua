@@ -73,8 +73,10 @@ void registerUser() {
     clearScreen();
     string username, password;
 
-    cout << LAVANDER << R"(+------------------------------+
-|           SIGN UP            |
+    cout << LAVANDER << R"(+------------------------------+ )"
+        << RESET << SKYBLUE << R"(
+|           Sign up            | )"
+<< RESET << LAVANDER << R"(
 +------------------------------+)" << RESET << "\n\n";
     cout << SKYBLUE << "Enter username: " << RESET;
     cin >> username;

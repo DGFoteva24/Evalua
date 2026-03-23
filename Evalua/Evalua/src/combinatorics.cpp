@@ -16,8 +16,8 @@ void combinatorics() {
 
     string content = string(LAVANDER) + R"(
 
-+------------------------------+
-|        COMBINATORICS         |
++------------------------------+ )" + RESET + string(SKYBLUE) + R"(
+|        COMBINATORICS         | )" + RESET + string(LAVANDER) + R"(
 +------------------------------+
 
 )" + RESET +
@@ -57,7 +57,7 @@ How many ways to choose 3 books out of 5?
 
     cout << content;
 
-    cout << LAVANDER << "Press Enter to go back: " << RESET;
+    cout << LAVANDER << "Press Enter to return to the menu..." << RESET;
     char ch = _getch();
     cout << ch << endl;
     if (ch == '\r' || ch == '\n') {

@@ -16,8 +16,8 @@ void algebra() {
 
     string content = string(LAVANDER) + R"(
 
-+------------------------------+
-|            ALGEBRA           |
++------------------------------+ )" + RESET + string(SKYBLUE) + R"(
+|            ALGEBRA           | )" + RESET + string(LAVANDER) + R"(
 +------------------------------+
 
 )" + RESET +

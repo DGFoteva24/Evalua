@@ -16,8 +16,8 @@ void geometry() {
 
     string content = string(LAVANDER) + R"(
 
-+------------------------------+
-|           GEOMETRY           |
++------------------------------+ )" + RESET + string(SKYBLUE) + R"(
+|           GEOMETRY           | )"+ RESET + string(LAVANDER) + R"(
 +------------------------------+
 
 )" + RESET +

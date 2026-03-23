@@ -10,9 +10,9 @@ using namespace std;
 #define SKYBLUE "\033[38;5;117m"
 
 void aboutUs() {
-	cout << LAVANDER << "+----------------------------+" << RESET << endl;
-	cout << LAVANDER << "|" << SKYBLUE << "          About Us          " << LAVANDER << "|" << RESET << endl;
-	cout << LAVANDER << "+----------------------------+" << RESET << endl << endl;
+	cout << LAVANDER << "+----------------------------------+" << RESET << endl;
+	cout << SKYBLUE << "|            About us            |" << RESET << endl;
+	cout << LAVANDER << "+----------------------------------+" << RESET << endl << endl;
 
 	cout << SKYBLUE << "Our Mission" << endl << LAVANDER << "-----------" << RESET << endl;
 	cout << SKYBLUE << "Evalua is an educational platform designed to help students learn and practice mathematics." << RESET << endl;
@@ -31,7 +31,7 @@ void aboutUs() {
 	cout << SKYBLUE << "Mariela Apostolova - 9B - Backend Developer" << RESET << endl;
 	cout << SKYBLUE << "Rosica Velkova - 9A - Quality Engineer" << RESET << endl;
 
-	cout << LAVANDER << "\nPress Enter to go back: " << RESET;
+    cout << LAVANDER << "\nPress Enter to return to the menu..." << RESET;
 	char ch = _getch();
 	cout << ch << endl;
 	if (ch == '\r' || ch == '\n') {

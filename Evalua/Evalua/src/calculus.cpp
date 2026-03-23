@@ -16,8 +16,8 @@ void calculus() {
 
     string content = string(LAVANDER) + R"(
 
-+------------------------------+
-|           CALCULUS           |
++------------------------------+ )" + RESET + string(SKYBLUE) + R"(
+|           CALCULUS           | )" + RESET + string(LAVANDER) + R"(
 +------------------------------+
 
 )" + RESET +
@@ -58,7 +58,7 @@ int(6x + 5) dx = 3x^2 + 5x + C
 
     cout << content;
 
-    cout << LAVANDER << "Press Enter to go back: " << RESET;
+    cout << LAVANDER << "Press Enter to return to the menu..." << RESET;
     char ch = _getch();
     cout << ch << endl;
     if (ch == '\r' || ch == '\n') {

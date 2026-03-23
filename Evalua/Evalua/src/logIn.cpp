@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <limits>
 #include <functional>  // std::hash for password hashing
 #include "../include/signUp.h"
 #include "../include/firstMenu.h"
@@ -9,8 +10,6 @@
 
 using namespace std;
 using std::hash;
-
-#include <limits>
 
 #define RESET "\033[0m"
 #define LAVANDER "\033[38;5;183m"
@@ -22,8 +21,10 @@ extern const string USERS_FILE;
 void loginUser() {
     string username, password;
 
-    cout << LAVANDER << R"(+------------------------------+
-|           LOG IN              |
+    cout << LAVANDER << R"(+------------------------------+ )"
+        << RESET << SKYBLUE << R"(
+|           Log in              | )"
+<< RESET << LAVANDER << R"(
 +------------------------------+)" << "\n\n";
     cout << SKYBLUE << "Enter username: " << RESET;
     cin >> username;

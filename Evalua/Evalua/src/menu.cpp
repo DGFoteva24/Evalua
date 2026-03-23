@@ -31,7 +31,7 @@ int readNumericChoice() {
 
 void mainMenu() {
     cout << LAVANDER << "+-------------------------------------------+" << RESET << endl;
-    cout << LAVANDER << "|" << SKYBLUE << "            Welcome to Evalua!             " << LAVANDER << "|" << RESET << endl;
+    cout << SKYBLUE << "|            Welcome to Evalua!             |" << RESET << endl;
     cout << LAVANDER << "+-------------------------------------------+" << RESET << endl;
 
     cout << endl;
@@ -49,12 +49,12 @@ void mainMenu() {
     string a5 = "     |  --  |   |   ";
     string a6 = "      --__--    *";
 
-    cout << SKYBLUE << "1. Open learning material" << RESET << spaces << LAVANDER << a1 << RESET << endl;
-    cout << SKYBLUE << "2. Take a test           " << RESET << spaces << LAVANDER << a2 << RESET << endl;
-    cout << SKYBLUE << "3. Homework              " << RESET << spaces << LAVANDER << a3 << RESET << endl;
-    cout << SKYBLUE << "4. View Statistics       " << RESET << spaces << LAVANDER << a4 << RESET << endl;
-    cout << SKYBLUE << "5. Log Out               " << RESET << spaces << LAVANDER << a5 << RESET << endl;
-    cout << SKYBLUE << "6. Exit                  " << RESET << spaces << LAVANDER << a6 << RESET << endl;
+    cout << SKYBLUE << " 1. Open learning material" << RESET << spaces << LAVANDER << a1 << RESET << endl;
+    cout << SKYBLUE << " 2. Take a test           " << RESET << spaces << LAVANDER << a2 << RESET << endl;
+    cout << SKYBLUE << " 3. Homework              " << RESET << spaces << LAVANDER << a3 << RESET << endl;
+    cout << SKYBLUE << " 4. View Statistics       " << RESET << spaces << LAVANDER << a4 << RESET << endl;
+    cout << SKYBLUE << " 5. Log Out               " << RESET << spaces << LAVANDER << a5 << RESET << endl;
+    cout << SKYBLUE << " 6. Exit                  " << RESET << spaces << LAVANDER << a6 << RESET << endl;
 
     cout << endl;
 

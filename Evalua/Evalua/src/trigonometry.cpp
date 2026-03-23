@@ -15,8 +15,8 @@ void trigonometry() {
 
     string content = string(LAVANDER) + R"(
 
-+--------------------------------+
-|          TRIGONOMETRY          |
++--------------------------------+ )" + RESET + string(SKYBLUE) + R"(
+|          TRIGONOMETRY          | )" + RESET + string(LAVANDER) + R"(
 +--------------------------------+
 
 )" + RESET +
@@ -39,7 +39,7 @@ R"(sin(x)^2 + cos(x)^2 = 1
 
     cout << content;
 
-    cout << LAVANDER << "\nPress Enter to go back: " << RESET;
+    cout << LAVANDER << "\nPress Enter to return to the menu..." << RESET;
     char ch = _getch();
     cout << ch << endl;
     if (ch == '\r' || ch == '\n') {

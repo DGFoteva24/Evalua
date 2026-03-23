@@ -146,14 +146,14 @@ void test() {
 	cout << LAVANDER << "+----------------------------------+" << RESET << endl;
 
 	cout << SKYBLUE << endl
-		<< "1. Random Test" << endl
-		<< "2. Algebra Test" << endl
-		<< "3. Calculus Test" << endl
-		<< "4. Combinatorics Test" << endl
-		<< "5. Geometry Test" << endl
-		<< "6. Trigonometry Test" << RESET << endl << endl;
+		<< " 1. Random Test" << endl
+		<< " 2. Algebra Test" << endl
+		<< " 3. Calculus Test" << endl
+		<< " 4. Combinatorics Test" << endl
+		<< " 5. Geometry Test" << endl
+		<< " 6. Trigonometry Test" << RESET << endl << endl;
 
-	cout << LAVANDER << "Enter your choice or press Enter to go back: " << RESET;
+    cout << LAVANDER << "Enter your choice or Press Enter to return to the menu: " << RESET;
 
 	int choice = readNumericChoice();
 
