@@ -47,6 +47,7 @@ void loginUser() {
     while (file >> storedUser >> storedHash) {
         if (storedUser == username && storedHash == hashedInput) {
             found = true;
+            currentUser = username;
             break;
         }
     }

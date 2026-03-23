@@ -4,7 +4,7 @@
 #include "../include/question.h"
 
 void test();
-void runTest(vector<Question>& questions);
+void runTest(vector<Question>& questions, string category);
 void randomTest();
 void algebraTest();
 void calculusTest();

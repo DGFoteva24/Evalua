@@ -6,6 +6,7 @@
 #include "../include/test.h"
 #include "../include/statistics.h"
 #include "../include/firstMenu.h"
+#include "../include/homework.h"
 #include "../include/menu.h"
 
 using namespace std;
@@ -29,20 +30,38 @@ int readNumericChoice() {
 }
 
 void mainMenu() {
-    cout << LAVANDER << "+---------------------------------------+" << RESET << endl;
-    cout << LAVANDER << "|" << SKYBLUE << "           Welcome to Evalua!          " << LAVANDER << "|" << RESET << endl;
-    cout << LAVANDER << "+---------------------------------------+" << RESET << endl;
+    /* cout << R"(      __--__
+  __--      --__
+--__          __--
+    --__  __--  |
+     |  --  |   |
+      --__--    *
+)";*/
+    cout << LAVANDER << "+-------------------------------------------+" << RESET << endl;
+    cout << LAVANDER << "|" << SKYBLUE << "            Welcome to Evalua!             " << LAVANDER << "|" << RESET << endl;
+    cout << LAVANDER << "+-------------------------------------------+" << RESET << endl;
 
     cout << endl;
 
-    cout << LAVANDER << "Choose what you would like to do:" << RESET << endl;
-    cout << endl;
+    cout << LAVANDER << "Choose what you would like to do:" << RESET << endl << endl;
 
-    cout << SKYBLUE << "1. Open learning material" << RESET << endl;
-    cout << SKYBLUE << "2. Take a test" << RESET << endl;
-    cout << SKYBLUE << "3. View Statistics" << RESET << endl;
-    cout << SKYBLUE << "4. Log Out" << RESET << endl;
-    cout << SKYBLUE << "5. Exit" << RESET << endl;
+    const int gap = 2;
+    string spaces(gap, ' ');
+
+
+    string a1 = "      __--__";
+    string a2 = "  __--      --__";
+    string a3 = "--__          __--";
+    string a4 = "    --__  __--  |";
+    string a5 = "     |  --  |   |   ";
+    string a6 = "      --__--    *";
+
+    cout << SKYBLUE << "1. Open learning material" << RESET << spaces << LAVANDER << a1 << RESET << endl;
+    cout << SKYBLUE << "2. Take a test           " << RESET << spaces << LAVANDER << a2 << RESET << endl;
+    cout << SKYBLUE << "3. Homework              " << RESET << spaces << LAVANDER << a3 << RESET << endl;
+    cout << SKYBLUE << "4. View Statistics       " << RESET << spaces << LAVANDER << a4 << RESET << endl;
+    cout << SKYBLUE << "5. Log Out               " << RESET << spaces << LAVANDER << a5 << RESET << endl;
+    cout << SKYBLUE << "6. Exit                  " << RESET << spaces << LAVANDER << a6 << RESET << endl;
 
     cout << endl;
 
@@ -53,11 +72,12 @@ void mainMenu() {
     switch (choice) {
     case 1: clearScreen(); study(); break;
     case 2: clearScreen(); test(); break;
-    case 3: clearScreen(); statistics(); break;
-    case 4: clearScreen(); firstMenu(); break;
-    case 5: clearScreen(); exitProgram(); break;
+    case 3: clearScreen(); homework(); break;
+    case 4: clearScreen(); statistics(); break;
+    case 5: clearScreen(); firstMenu(); break;
+    case 6: clearScreen(); exitProgram(); break;
     default:
-        cout << "Please pick a number! (1-5)" << endl;
+        cout << "Please pick a number! (1-6)" << endl;
         break;
     }
 }

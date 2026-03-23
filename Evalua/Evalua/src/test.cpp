@@ -5,6 +5,9 @@
 #include <cctype>
 #include <windows.h>
 #include <conio.h>
+#include <chrono>
+#include "../include/statistics.h"
+#include "../include/signUp.h"
 #include "../include/menu.h"
 #include "../include/question.h"
 #include "../include/test.h"
@@ -25,8 +28,34 @@ void combinatoricsTest();
 void geometryTest();
 void trigonometryTest();
 
+// Picks 7 easy, 8 medium, 5 hard questions from the pool.
+// If a tier is short, fills the gap from the tier below it.
 
-void runTest(vector<Question>& questions) {
+vector<Question> selectByDifficulty(vector<Question>& pool) {
+	vector<Question> easy, medium, hard;
+
+	for (auto& q : pool) {
+		if (q.points == 10)       easy.push_back(q);
+		else if (q.points == 15)  medium.push_back(q);
+		else                      hard.push_back(q);
+	}
+
+	mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+
+	shuffle(easy.begin(), easy.end(), rng);
+	shuffle(medium.begin(), medium.end(), rng);
+	shuffle(hard.begin(), hard.end(), rng);
+
+	vector<Question> selected;
+
+	for (int i = 0; i < 10 && i < (int)easy.size(); i++) selected.push_back(easy[i]);
+	for (int i = 0; i < 5 && i < (int)medium.size(); i++) selected.push_back(medium[i]);
+	for (int i = 0; i < 5 && i < (int)hard.size(); i++) selected.push_back(hard[i]);
+
+	return selected;
+}
+
+void runTest(vector<Question>& questions, string category) {
 	SetConsoleOutputCP(CP_UTF8);
 	int score = 0;
 	int maxScore = 0;
@@ -84,9 +113,10 @@ void runTest(vector<Question>& questions) {
 	cout << LAVANDER << "+----------------------------------+" << RESET << endl;
 	cout << SKYBLUE << "|           Test Complete!         |" << RESET << endl;
 	cout << LAVANDER << "+----------------------------------+" << RESET << endl;
-	cout << SKYBLUE << "Score: " << score << "/" << maxScore << RESET << endl;
 
 	int pct = (maxScore > 0) ? (score * 100 / maxScore) : 0;
+	cout << SKYBLUE << "Score: " << pct << "%" << RESET << endl;
+
 	string grade;
 
 	if (pct >= 90) grade = "6";
@@ -96,6 +126,8 @@ void runTest(vector<Question>& questions) {
 	else grade = "2";
 
 	cout << SKYBLUE << "Grade: " << grade << RESET << endl << endl;
+
+	saveResult(currentUser, category, stoi(grade));
 
 	cout << LAVANDER << "Press Enter to return to the menu..." << RESET;
 	{
@@ -149,72 +181,36 @@ void test() {
 // ── Individual test builders ──────────────────────────────────────────────────
 void randomTest() {
 	vector<Question> bank = getQuestionBank();
-
-	shuffle(bank.begin(), bank.end(), default_random_engine(time(0)));
-
-	vector<Question> selectedQuestions;
-	for (int i = 0; i < 20 && i < (int)bank.size(); i++)   // bounds check added
-		selectedQuestions.push_back(bank[i]);
-
-	runTest(selectedQuestions);
+	vector<Question> selected = selectByDifficulty(bank);
+	runTest(selected, "Random");
 }
 
 void algebraTest() {
 	vector<Question> questions = getQuestionsByCategory("Algebra");
-
-	shuffle(questions.begin(), questions.end(), default_random_engine(time(0)));
-
-	vector<Question> selectedQuestions;
-	for (int i = 0; i < 20 && i < (int)questions.size(); i++)
-		selectedQuestions.push_back(questions[i]);
-
-	runTest(selectedQuestions);
+	vector<Question> selected = selectByDifficulty(questions);
+	runTest(selected, "Algebra");
 }
 
 void calculusTest() {
 	vector<Question> questions = getQuestionsByCategory("Calculus");
-
-	shuffle(questions.begin(), questions.end(), default_random_engine(time(0)));
-
-	vector<Question> selectedQuestions;
-	for (int i = 0; i < 20 && i < (int)questions.size(); i++)
-		selectedQuestions.push_back(questions[i]);
-
-	runTest(selectedQuestions);
+	vector<Question> selected = selectByDifficulty(questions);
+	runTest(selected, "Calculus");
 }
 
 void combinatoricsTest() {
 	vector<Question> questions = getQuestionsByCategory("Combinatorics");
-
-	shuffle(questions.begin(), questions.end(), default_random_engine(time(0)));
-
-	vector<Question> selectedQuestions;
-	for (int i = 0; i < 20 && i < (int)questions.size(); i++)
-		selectedQuestions.push_back(questions[i]);
-
-	runTest(selectedQuestions);
+	vector<Question> selected = selectByDifficulty(questions);
+	runTest(selected, "Combinatorics");
 }
 
 void geometryTest() {
 	vector<Question> questions = getQuestionsByCategory("Geometry");
-
-	shuffle(questions.begin(), questions.end(), default_random_engine(time(0)));
-
-	vector<Question> selectedQuestions;
-	for (int i = 0; i < 20 && i < (int)questions.size(); i++)
-		selectedQuestions.push_back(questions[i]);
-
-	runTest(selectedQuestions);
+	vector<Question> selected = selectByDifficulty(questions);
+	runTest(selected, "Geometry");
 }
 
 void trigonometryTest() {
 	vector<Question> questions = getQuestionsByCategory("Trigonometry");
-
-	shuffle(questions.begin(), questions.end(), default_random_engine(time(0)));
-
-	vector<Question> selectedQuestions;
-	for (int i = 0; i < 20 && i < (int)questions.size(); i++)
-		selectedQuestions.push_back(questions[i]);
-
-	runTest(selectedQuestions);
+	vector<Question> selected = selectByDifficulty(questions);
+	runTest(selected, "Trigonometry");
 }

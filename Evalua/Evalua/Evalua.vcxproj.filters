@@ -24,9 +24,6 @@
     <ClCompile Include="src\aboutUs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\account.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\firstMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -63,15 +60,15 @@
     <ClCompile Include="src\signUp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\homework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\menu.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="include\aboutUs.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\account.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="include\firstMenu.h">
@@ -110,8 +107,12 @@
     <ClInclude Include="include\signUp.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\homework.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="data\users.txt" />
+    <Text Include="data\results.txt" />
   </ItemGroup>
 </Project>

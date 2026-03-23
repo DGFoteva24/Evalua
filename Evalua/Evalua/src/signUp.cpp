@@ -19,7 +19,8 @@ using std::hash;
 #define LAVANDER "\033[38;5;183m"
 #define SKYBLUE "\033[38;5;117m"
 
-const string USERS_FILE = "Evalua-main\Evalua\Evalua\data";
+string currentUser = "";
+const string USERS_FILE = "users.txt";
 
 bool validPassword(const string& password) {
     if (password.length() < 8)
@@ -115,6 +116,8 @@ void registerUser() {
 
     file << username << " " << hashedPassword << "\n";
     file.close();
+
+    currentUser = username;
 
     cout << LAVANDER << "Registration successful\n\n" << RESET;
     cout << "Press Enter to continue...";

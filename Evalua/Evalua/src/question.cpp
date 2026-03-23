@@ -54,6 +54,21 @@ vector<Question> getQuestionBank() {
     addQuestion(bank, "Simplify: (2x)(3x^2)", "6x^2", "6x^3", "5x^3", "3x^2", 1, "Algebra", 15);
     addQuestion(bank, "Solve: x/5 - 2 = 1", "10", "15", "20", "5", 1, "Algebra", 10);
     addQuestion(bank, "Factor: x^2 + 7x + 12", "(x + 3)(x + 4)", "(x - 3)(x - 4)", "(x + 2)(x + 6)", "(x - 2)(x - 6)", 0, "Algebra", 20);
+    addQuestion(bank, "Solve: x + 5 = 12", "5", "6", "7", "8", 2, "Algebra", 10);
+    addQuestion(bank, "Solve: 2x = 10", "2", "5", "10", "20", 1, "Algebra", 10);
+    addQuestion(bank, "Solve: x - 3 = 4", "5", "6", "7", "8", 2, "Algebra", 10);
+    addQuestion(bank, "Solve: 3 + x = 9", "5", "6", "7", "8", 1, "Algebra", 10);
+    addQuestion(bank, "Solve: x/2 = 6", "10", "12", "14", "16", 1, "Algebra", 10);
+    addQuestion(bank, "Solve: 2x + 3 = 11", "3", "4", "5", "6", 1, "Algebra", 15);
+    addQuestion(bank, "Solve: 3x - 5 = 10", "3", "4", "5", "6", 2, "Algebra", 15);
+    addQuestion(bank, "Solve: x^2 = 16", "2", "3", "4", "±4", 3, "Algebra", 15);
+    addQuestion(bank, "Solve: 5x = 2x + 9", "2", "3", "4", "5", 1, "Algebra", 15);
+    addQuestion(bank, "Solve: x^2 - 9 = 0", "±3", "3", "-3", "9", 0, "Algebra", 15);
+    addQuestion(bank, "Solve: x^2 - 5x + 6 = 0", "2,3", "1,6", "3,4", "2,4", 0, "Algebra", 20);
+    addQuestion(bank, "Solve: 2x^2 - 8 = 0", "±2", "±4", "±√2", "±√4", 0, "Algebra", 20);
+    addQuestion(bank, "Solve: x^2 + 4x + 4 = 0", "-2", "2", "0", "4", 0, "Algebra", 20);
+    addQuestion(bank, "Solve: (x-1)(x-3)=0", "1,3", "2,3", "1,2", "0,3", 0, "Algebra", 20);
+    addQuestion(bank, "Solve: x^2 - x - 6 = 0", "2,-3", "3,-2", "1,-6", "-1,6", 0, "Algebra", 20);
 
     // CALCULUS
     addQuestion(bank, "Derivative of x^2 ?", "x", "2x", "x^2", "1", 1, "Calculus", 10);
@@ -82,10 +97,25 @@ vector<Question> getQuestionBank() {
     addQuestion(bank, "Integral of sec^2(x) dx?", "tan(x) + C", "sec(x) + C", "sin(x) + C", "-cos(x) + C", 0, "Calculus", 20);
     addQuestion(bank, "Derivative of e^(2x)?", "2e^(2x)", "e^(2x)", "2e^x", "e^x", 0, "Calculus", 20);
     addQuestion(bank, "Integral of 3 dx?", "3x + C", "x + C", "3 + C", "C", 0, "Calculus", 10);
-    addQuestion(bank, "Derivative of sin(2x)?", "2cos(2x)", "cos(2x)", "-2sin(2x)", "2sin(2x)", 0, "Calculus", 25);
+    addQuestion(bank, "Derivative of sin(2x)?", "2cos(2x)", "cos(2x)", "-2sin(2x)", "2sin(2x)", 0, "Calculus", 20);
     addQuestion(bank, "Integral of 1/(1 + x^2) dx?", "arctan(x) + C", "ln(x) + C", "x + C", "tan(x) + C", 0, "Calculus", 20);
-    addQuestion(bank, "Derivative of x ln(x)?", "ln(x) + 1", "x/x", "1/x", "x ln(x)", 0, "Calculus", 25);
-    addQuestion(bank, "Integral of cos(2x) dx?", "sin(2x) + C", "1/2 sin(2x) + C", "2sin(x) + C", "cos(x) + C", 1, "Calculus", 25);
+    addQuestion(bank, "Derivative of x ln(x)?", "ln(x) + 1", "x/x", "1/x", "x ln(x)", 0, "Calculus", 20);
+    addQuestion(bank, "Integral of cos(2x) dx?", "sin(2x) + C", "1/2 sin(2x) + C", "2sin(x) + C", "cos(x) + C", 1, "Calculus", 20);
+    addQuestion(bank, "d/dx(x^2) = ?", "x", "2x", "x^2", "2", 1, "Calculus", 10);
+    addQuestion(bank, "d/dx(5x) = ?", "5", "x", "0", "1", 0, "Calculus", 10);
+    addQuestion(bank, "∫1 dx = ?", "x", "1", "0", "x+1", 0, "Calculus", 10);
+    addQuestion(bank, "d/dx(3) = ?", "3", "1", "0", "-1", 2, "Calculus", 10);
+    addQuestion(bank, "∫x dx = ?", "x", "x^2", "x^2/2", "2x", 2, "Calculus", 10);
+    addQuestion(bank, "d/dx(x^3) = ?", "3x^2", "x^2", "x^3", "2x", 0, "Calculus", 15);
+    addQuestion(bank, "∫2x dx = ?", "x^2", "2x^2", "x^2+1", "2x", 0, "Calculus", 15);
+    addQuestion(bank, "d/dx(sin x) = ?", "cos x", "-cos x", "sin x", "-sin x", 0, "Calculus", 15);
+    addQuestion(bank, "∫cos x dx = ?", "sin x", "-sin x", "cos x", "-cos x", 0, "Calculus", 15);
+    addQuestion(bank, "d/dx(e^x) = ?", "e^x", "x e^x", "1", "0", 0, "Calculus", 15);
+    addQuestion(bank, "d/dx(x^2 sin x) = ?", "2x sin x + x^2 cos x", "x^2 cos x", "2x cos x", "sin x", 0, "Calculus", 20);
+    addQuestion(bank, "∫x^2 dx = ?", "x^3/3", "x^2/2", "2x", "x^3", 0, "Calculus", 20);
+    addQuestion(bank, "d/dx(ln x) = ?", "1/x", "ln x", "x", "0", 0, "Calculus", 20);
+    addQuestion(bank, "∫e^x dx = ?", "e^x", "xe^x", "e^x+1", "ln x", 0, "Calculus", 20);
+    addQuestion(bank, "d/dx(tan x) = ?", "sec^2 x", "tan x", "sec x", "cos x", 0, "Calculus", 20);
 
     // COMBINATORICS
     addQuestion(bank, "How many permutations of 3 distinct objects exist?", "3", "6", "9", "12", 1, "Combinatorics", 10);
@@ -114,10 +144,45 @@ vector<Question> getQuestionBank() {
     addQuestion(bank, "How many subsets does a set of size 6 have?", "32", "64", "48", "16", 1, "Combinatorics", 15);
     addQuestion(bank, "What is 6! ?", "360", "720", "120", "240", 1, "Combinatorics", 20);
     addQuestion(bank, "C(8,3) equals?", "48", "56", "64", "80", 1, "Combinatorics", 20);
-    addQuestion(bank, "P(7,3) equals?", "210", "120", "504", "720", 0, "Combinatorics", 25);
+    addQuestion(bank, "P(7,3) equals?", "210", "120", "504", "720", 0, "Combinatorics", 20);
     addQuestion(bank, "How many ways to choose 4 from 8?", "56", "70", "28", "84", 1, "Combinatorics", 20);
     addQuestion(bank, "C(12,2) equals?", "66", "72", "132", "24", 0, "Combinatorics", 15);
-    addQuestion(bank, "How many permutations of the word LEVEL?", "60", "120", "30", "20", 2, "Combinatorics", 30);
+    addQuestion(bank, "How many permutations of the word LEVEL?", "60", "120", "30", "20", 2, "Combinatorics", 20);
+    addQuestion(bank, "5! = ?", "60", "120", "24", "720", 1, "Combinatorics", 10);
+    addQuestion(bank, "Number of ways to choose 1 from 3?", "1", "2", "3", "6", 2, "Combinatorics", 10);
+    addQuestion(bank, "3! = ?", "3", "6", "9", "12", 1, "Combinatorics", 10);
+    addQuestion(bank, "Number of permutations of 2 items?", "1", "2", "3", "4", 1, "Combinatorics", 10);
+    addQuestion(bank, "C(4,1) = ?", "4", "3", "2", "1", 0, "Combinatorics", 10);
+    addQuestion(bank, "C(5,2) = ?", "10", "20", "5", "15", 0, "Combinatorics", 15);
+    addQuestion(bank, "4! = ?", "24", "12", "16", "20", 0, "Combinatorics", 15);
+    addQuestion(bank, "Permutations of 3 letters?", "3", "6", "9", "12", 1, "Combinatorics", 15);
+    addQuestion(bank, "C(6,3) = ?", "20", "15", "10", "25", 0, "Combinatorics", 15);
+    addQuestion(bank, "Ways to arrange 3 items?", "3", "6", "9", "12", 1, "Combinatorics", 15);
+    addQuestion(bank, "C(8,2) = ?", "28", "16", "32", "24", 0, "Combinatorics", 20);
+    addQuestion(bank, "6! = ?", "720", "360", "120", "840", 0, "Combinatorics", 20);
+    addQuestion(bank, "C(7,3) = ?", "35", "21", "28", "42", 0, "Combinatorics", 20);
+    addQuestion(bank, "Permutations of 4 items?", "24", "12", "16", "20", 0, "Combinatorics", 20);
+    addQuestion(bank, "C(10,1) = ?", "10", "9", "8", "7", 0, "Combinatorics", 20);
+    addQuestion(bank, "How many ways to arrange 3 books on a shelf?", "3", "6", "9", "12", 1, "Combinatorics", 10);
+    addQuestion(bank, "What is 5! ?", "60", "100", "120", "24", 2, "Combinatorics", 10);
+    addQuestion(bank, "How many ways to choose 1 item from 4?", "1", "2", "4", "8", 2, "Combinatorics", 10);
+    addQuestion(bank, "What is 0! ?", "0", "1", "Undefined", "Infinity", 1, "Combinatorics", 10);
+    addQuestion(bank, "How many 2-digit numbers can be formed from {1,2,3} with repetition?", "6", "8", "9", "12", 2, "Combinatorics", 10);
+    addQuestion(bank, "What is 4! / 4?", "4", "6", "8", "24", 1, "Combinatorics", 10);
+    addQuestion(bank, "How many ways to arrange 2 items from {A,B,C} without repetition?", "3", "6", "9", "2", 1, "Combinatorics", 10);
+    addQuestion(bank, "P(4,1) = ?", "1", "4", "12", "24", 1, "Combinatorics", 10);
+    addQuestion(bank, "How many subsets does a set of 2 elements have?", "2", "3", "4", "6", 2, "Combinatorics", 10);
+    addQuestion(bank, "C(4,0) = ?", "0", "1", "4", "Undefined", 1, "Combinatorics", 10);
+    addQuestion(bank, "C(5,2) = ?", "5", "10", "15", "20", 1, "Combinatorics", 15);
+    addQuestion(bank, "How many ways to arrange the letters in 'CAT'?", "3", "6", "9", "12", 1, "Combinatorics", 15);
+    addQuestion(bank, "P(5,2) = ?", "10", "15", "20", "25", 2, "Combinatorics", 15);
+    addQuestion(bank, "How many subsets does a set of 4 elements have?", "8", "12", "16", "32", 2, "Combinatorics", 15);
+    addQuestion(bank, "C(6,3) = ?", "15", "20", "18", "12", 1, "Combinatorics", 15);
+    addQuestion(bank, "How many ways to arrange letters in 'LEVEL'?", "60", "120", "30", "20", 0, "Combinatorics", 20);
+    addQuestion(bank, "How many ways to distribute 4 identical balls into 3 distinct boxes?", "9", "12", "15", "18", 2, "Combinatorics", 20);
+    addQuestion(bank, "C(10,3) = ?", "120", "720", "210", "90", 0, "Combinatorics", 20);
+    addQuestion(bank, "How many diagonals does a hexagon have?", "6", "8", "9", "12", 2, "Combinatorics", 20);
+    addQuestion(bank, "In how many ways can 5 people sit in a circle?", "120", "60", "24", "20", 2, "Combinatorics", 20);
 
     // GEOMETRY
     addQuestion(bank, "Sum of angles in a triangle?", "90°", "180°", "270°", "360°", 1, "Geometry", 10);
@@ -150,6 +215,21 @@ vector<Question> getQuestionBank() {
     addQuestion(bank, "Volume of a cylinder?", "πr^2h", "2πrh", "πrh^2", "πr^3", 0, "Geometry", 15);
     addQuestion(bank, "Surface area of a cube?", "6s", "6s^2", "s^3", "3s^2", 1, "Geometry", 15);
     addQuestion(bank, "A line that touches a circle at exactly one point is a?", "Chord", "Secant", "Tangent", "Radius", 2, "Geometry", 20);
+    addQuestion(bank, "Sum of angles in triangle?", "90", "180", "270", "360", 1, "Geometry", 10);
+    addQuestion(bank, "Area of square (side 2)?", "2", "4", "6", "8", 1, "Geometry", 10);
+    addQuestion(bank, "Perimeter of square side 3?", "6", "9", "12", "15", 2, "Geometry", 10);
+    addQuestion(bank, "Angles in right angle?", "45", "60", "90", "120", 2, "Geometry", 10);
+    addQuestion(bank, "Circle has how many degrees?", "180", "270", "360", "90", 2, "Geometry", 10);
+    addQuestion(bank, "Area of triangle (base 4 height 3)?", "6", "12", "8", "10", 0, "Geometry", 15);
+    addQuestion(bank, "Circumference formula?", "2πr", "πr^2", "πd^2", "r^2", 0, "Geometry", 15);
+    addQuestion(bank, "Area of circle?", "πr^2", "2πr", "πd", "r^2", 0, "Geometry", 15);
+    addQuestion(bank, "Pythagoras: 3,4,?", "5", "6", "7", "8", 0, "Geometry", 15);
+    addQuestion(bank, "Rectangle area 5x3?", "15", "10", "8", "20", 0, "Geometry", 15);
+    addQuestion(bank, "Hypotenuse of 5,12 triangle?", "13", "12", "10", "14", 0, "Geometry", 20);
+    addQuestion(bank, "Area of circle radius 3?", "9π", "6π", "3π", "12π", 0, "Geometry", 20);
+    addQuestion(bank, "Diagonal of square side 2?", "2√2", "4", "√2", "2", 0, "Geometry", 20);
+    addQuestion(bank, "Volume cube side 3?", "27", "9", "18", "36", 0, "Geometry", 20);
+    addQuestion(bank, "Surface area cube side 2?", "24", "8", "16", "32", 0, "Geometry", 20);
 
     // TRIGONOMETRY
     addQuestion(bank, "sin(90deg) = ?", "0", "1", "-1", "2", 1, "Trigonometry", 10);
@@ -182,19 +262,32 @@ vector<Question> getQuestionBank() {
     addQuestion(bank, "cos(π/3) = ?", "1/2", "√3/2", "0", "1", 0, "Trigonometry", 15);
     addQuestion(bank, "tan(π/4) = ?", "0", "1", "-1", "Undefined", 1, "Trigonometry", 10);
     addQuestion(bank, "sin(π/2) = ?", "0", "1", "-1", "2", 1, "Trigonometry", 10);
+    addQuestion(bank, "sin(0) = ?", "0", "1", "-1", "2", 0, "Trigonometry", 10);
+    addQuestion(bank, "cos(0) = ?", "0", "1", "-1", "2", 1, "Trigonometry", 10);
+    addQuestion(bank, "tan(0) = ?", "0", "1", "-1", "undefined", 0, "Trigonometry", 10);
+    addQuestion(bank, "sin(π/2) = ?", "0", "1", "-1", "2", 1, "Trigonometry", 10);
+    addQuestion(bank, "cos(π/2) = ?", "0", "1", "-1", "2", 0, "Trigonometry", 10);
+    addQuestion(bank, "sin(π) = ?", "0", "1", "-1", "2", 0, "Trigonometry", 15);
+    addQuestion(bank, "cos(π) = ?", "-1", "1", "0", "2", 0, "Trigonometry", 15);
+    addQuestion(bank, "tan(π/4) = ?", "0", "1", "-1", "2", 1, "Trigonometry", 15);
+    addQuestion(bank, "sin(π/6) = ?", "1/2", "√2/2", "√3/2", "0", 0, "Trigonometry", 15);
+    addQuestion(bank, "cos(π/3) = ?", "1/2", "√2/2", "√3/2", "0", 0, "Trigonometry", 15);
+    addQuestion(bank, "sin^2x + cos^2x = ?", "1", "0", "x", "2", 0, "Trigonometry", 20);
+    addQuestion(bank, "tan x = sin x / ?", "cos x", "tan x", "sin x", "1", 0, "Trigonometry", 20);
+    addQuestion(bank, "sec x = ?", "1/cos x", "1/sin x", "cos x", "tan x", 0, "Trigonometry", 20);
+    addQuestion(bank, "csc x = ?", "1/sin x", "1/cos x", "tan x", "cos x", 0, "Trigonometry", 20);
+    addQuestion(bank, "cos^2x - sin^2x = ?", "cos2x", "sin2x", "1", "0", 0, "Trigonometry", 20);
 
     return bank;
 }
 
-vector<Question> getQuestionsByCategory(string category)
-{
+vector<Question> getQuestionsByCategory(string category) {
     vector<Question> bank = getQuestionBank();
     vector<Question> filtered;
 
     for (Question q : bank)
     {
-        if (q.category == category)
-        {
+        if (q.category == category) {
             filtered.push_back(q);
         }
     }
