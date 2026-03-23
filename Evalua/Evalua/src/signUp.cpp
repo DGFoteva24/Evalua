@@ -2,8 +2,8 @@
 #include <fstream>  // File handling (read/write files)
 #include <string>
 #include <cctype> // Character checks (isupper, isdigit, etc.)
-#include <limits> // numeric_limits for clearing input buffer
 #include <functional>  // std::hash for password hashing
+#include <conio.h>
 #include "../include/signUp.h"
 #include "../include/firstMenu.h"
 #include "../include/logIn.h"
@@ -84,8 +84,7 @@ void registerUser() {
     if (usernameExists(username)) {
         cout << LAVANDER << "\nUser already exists\n\n" << RESET;
         cout << "Press Enter to return...";
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        cin.get();
+        while (_getch() != '\r');
         return;
     }
 
@@ -102,8 +101,7 @@ void registerUser() {
         cout << "- number\n";
         cout << LAVANDER << "Password must NOT contain spaces\n\n";
         cout << "Press Enter to return...";
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        cin.get();
+        while (_getch() != '\r');
         return;
     }
     size_t hashedPassword = hashPassword(password);
@@ -112,8 +110,7 @@ void registerUser() {
     if (!file.is_open()) {
         cout << LAVANDER << "Error: Could not open users file for writing.\n\n" << RESET;
         cout << "Press Enter to return...";
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        cin.get();
+        while (_getch() != '\r');
         return;
     }
 
@@ -124,8 +121,7 @@ void registerUser() {
 
     cout << LAVANDER << "Registration successful\n\n" << RESET;
     cout << "Press Enter to continue...";
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    cin.get();
+    while (_getch() != '\r');
     clearScreen();
     mainMenu();
 }

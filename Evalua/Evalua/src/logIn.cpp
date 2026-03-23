@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <limits>
+#include <conio.h> // For _getch() to wait for Enter key
 #include <functional>  // std::hash for password hashing
 #include "../include/signUp.h"
 #include "../include/firstMenu.h"
@@ -58,15 +58,14 @@ void loginUser() {
     if (found) {
         cout << LAVANDER << "\nLogin successful\n\n" << RESET;
         cout << "Press Enter to continue...";
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        cin.get();
+        while (_getch() != '\r');
         clearScreen();
         mainMenu();
     }
     else {
         cout << LAVANDER << "\nLogin failed. \n\n" << RESET;
         cout << "Press Enter to return...";
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Clear buffer
-        cin.get();
+        while (_getch() != '\r');
+        return;
     }
 }
