@@ -23,7 +23,7 @@ void loginUser() {
 
     cout << LAVANDER << R"(+------------------------------+ )"
         << RESET << SKYBLUE << R"(
-|           Log in              | )"
+|           Log in             | )"
 << RESET << LAVANDER << R"(
 +------------------------------+)" << "\n\n";
     cout << SKYBLUE << "Enter username: " << RESET;

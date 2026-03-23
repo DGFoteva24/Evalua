@@ -18,8 +18,8 @@ void homework() {
     // Ensure console uses UTF-8 for Unicode symbols
     SetConsoleOutputCP(CP_UTF8);
 
-    string content = string(LAVANDER) + R"(+------------------------------+
-|          )" + string(SKYBLUE) + R"(Homework)" + RESET + string(LAVANDER) + R"(            |
+    string content = string(LAVANDER) + R"(+------------------------------+)" + RESET + string(SKYBLUE) + R"(
+|          Homework            |)" + RESET + string(LAVANDER) + R"(
 +------------------------------+
 
 )" + RESET +

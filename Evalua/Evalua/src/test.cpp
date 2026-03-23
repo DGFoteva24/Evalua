@@ -109,10 +109,10 @@ void runTest(vector<Question>& questions, string category) {
 		clearScreen();
 	}
 
-	cout << endl;
 	cout << LAVANDER << "+----------------------------------+" << RESET << endl;
 	cout << SKYBLUE << "|           Test Complete!         |" << RESET << endl;
 	cout << LAVANDER << "+----------------------------------+" << RESET << endl;
+	cout << endl;
 
 	int pct = (maxScore > 0) ? (score * 100 / maxScore) : 0;
 	cout << SKYBLUE << "Score: " << pct << "%" << RESET << endl;
