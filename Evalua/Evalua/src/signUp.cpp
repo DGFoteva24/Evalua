@@ -1,16 +1,13 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
+#include <fstream>  // File handling (read/write files)
 #include <string>
-#include <cctype>
-#include <cstdlib>
-#include <functional>
+#include <cctype> // Character checks (isupper, isdigit, etc.)
+#include <limits> // numeric_limits for clearing input buffer
+#include <functional>  // std::hash for password hashing
 #include "../include/signUp.h"
 #include "../include/firstMenu.h"
 #include "../include/logIn.h"
 #include "../include/menu.h"
-#include <filesystem>
-#include <limits>
 
 using namespace std;
 using std::hash;
@@ -26,6 +23,7 @@ bool validPassword(const string& password) {
     if (password.length() < 8)
         return false;
 
+    // Flags for required character types
     bool hasUpper = false;
     bool hasLower = false;
     bool hasDigit = false;
@@ -45,6 +43,7 @@ bool validPassword(const string& password) {
     return hasUpper && hasLower && hasDigit && hasSpecial && !hasSpace;
 }
 
+// Function to hash password (basic security)
 size_t hashPassword(const string& password) {
     const string SALT = "auth_salt_42";
     hash<string> hasher;
@@ -53,6 +52,7 @@ size_t hashPassword(const string& password) {
 
 bool usernameExists(const string& username) {
     ifstream file(USERS_FILE);
+    // If file can't be opened, assume no users exist yet
     if (!file.is_open()) {
         return false;
     }
@@ -105,6 +105,7 @@ void registerUser() {
         return;
     }
     size_t hashedPassword = hashPassword(password);
+    // Open file in append mode
     ofstream file(USERS_FILE, ios::app);
     if (!file.is_open()) {
         cout << LAVANDER << "Error: Could not open users file for writing.\n\n" << RESET;

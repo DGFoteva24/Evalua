@@ -14,9 +14,11 @@ using namespace std;
 #define LAVANDER "\033[38;5;183m"
 #define SKYBLUE  "\033[38;5;117m"
 
+// Store the file where results are saved
 const string RESULTS_FILE = "results.txt";
 
 void saveResult(string username, string category, int grade) {
+	// Opens file in append mode(adds new data without deleting old)
 	ofstream file(RESULTS_FILE, ios::app);
 	if (file.is_open()) {
 		file << username << " " << category << " " << grade << "\n";
@@ -39,10 +41,10 @@ void statistics() {
 		vector<tuple<string, string, int>> results;
 
 		while (file >> username >> category >> grade)
+			//Stores each record 
 			results.push_back({ username, category, grade });
 		file.close();
 
-		// Overall stats
 		int total = results.size(), sum = 0, highest = 2, lowest = 6;
 		for (auto& r : results) {
 			int g = get<2>(r);
@@ -78,9 +80,9 @@ void statistics() {
 		}
 		cout << endl;
 
-		// Your personal stats
 		int mySum = 0, myHigh = -1, myLow = 7, myCount = 0;
 		for (auto& r : results) {
+			//Check if result belongs to logged-in user
 			if (get<0>(r) == currentUser) {
 				int g = get<2>(r);
 				mySum += g;

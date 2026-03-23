@@ -283,7 +283,7 @@ vector<Question> getQuestionBank() {
 
 vector<Question> getQuestionsByCategory(string category) {
     vector<Question> bank = getQuestionBank();
-    vector<Question> filtered;
+    vector<Question> filtered; // Vector to store filtered questions
 
     for (Question q : bank)
     {

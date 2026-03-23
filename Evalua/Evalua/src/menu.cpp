@@ -30,13 +30,6 @@ int readNumericChoice() {
 }
 
 void mainMenu() {
-    /* cout << R"(      __--__
-  __--      --__
---__          __--
-    --__  __--  |
-     |  --  |   |
-      --__--    *
-)";*/
     cout << LAVANDER << "+-------------------------------------------+" << RESET << endl;
     cout << LAVANDER << "|" << SKYBLUE << "            Welcome to Evalua!             " << LAVANDER << "|" << RESET << endl;
     cout << LAVANDER << "+-------------------------------------------+" << RESET << endl;
