@@ -4,6 +4,7 @@
 #include <map>
 #include <vector>
 #include <iomanip>
+#include <conio.h>
 #include "../include/statistics.h"
 #include "../include/signUp.h"
 #include "../include/menu.h"
@@ -106,9 +107,7 @@ void statistics() {
 	}
 
     cout << endl << LAVANDER << "Press Enter to return to the menu..." << RESET;
-	// Use readNumericChoice() (which wraps _getch()) to wait for Enter or numeric input
-	int _ch = readNumericChoice();
-	(void)_ch; // ignore the value, we just wait for input
+	while (_getch() != '\r');
 	clearScreen();
 	mainMenu();
 }

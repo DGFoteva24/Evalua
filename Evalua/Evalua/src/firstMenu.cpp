@@ -73,7 +73,7 @@ J________L  \\__//  J\____,__L J__L J\____,__L J\____,__L
     } while (choice != 4);
 }
 void exitProgram() {
-    cout << "Exiting the program. Goodbye!" << endl << endl;
+    cout << "Exiting the program. Goodbye!" << endl;
     exit(0);
 }
 

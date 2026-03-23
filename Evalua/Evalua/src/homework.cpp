@@ -76,10 +76,7 @@ R"(5) Combinatorics / Probability: Increasing difficulty (a-e): )" + RESET + str
     cout << content;
 
     cout << LAVANDER << "\nPress Enter to return to the menu..." << RESET;
-    char ch = _getch();
-    cout << ch << endl;
-    if (ch == '\r' || ch == '\n') {
-        clearScreen();
-        mainMenu();
-    }
+    while (_getch() != '\r');
+    clearScreen();
+    mainMenu();
 }

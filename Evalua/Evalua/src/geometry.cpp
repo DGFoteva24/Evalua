@@ -14,9 +14,7 @@ void clearScreen();
 
 void geometry() {
 
-    string content = string(LAVANDER) + R"(
-
-+------------------------------+ )" + RESET + string(SKYBLUE) + R"(
+    string content = string(LAVANDER) + R"(+------------------------------+ )" + RESET + string(SKYBLUE) + R"(
 |           GEOMETRY           | )"+ RESET + string(LAVANDER) + R"(
 +------------------------------+
 
@@ -56,10 +54,5 @@ Area = 5 * 3 = 15
     cout << content;
 
     cout << LAVANDER << "\nPress Enter to go back: " << RESET;
-    char ch = _getch();
-    cout << ch << endl;
-    if (ch == '\r' || ch == '\n') {
-        clearScreen();
-        study();
-    }
+    waitForEnterAndReturn();
 }

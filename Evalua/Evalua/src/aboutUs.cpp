@@ -32,10 +32,7 @@ void aboutUs() {
 	cout << SKYBLUE << "Rosica Velkova - 9A - Quality Engineer" << RESET << endl;
 
     cout << LAVANDER << "\nPress Enter to return to the menu..." << RESET;
-	char ch = _getch();
-	cout << ch << endl;
-	if (ch == '\r' || ch == '\n') {
-		clearScreen();
-		firstMenu();
-	}
+	while (_getch() != '\r');
+	clearScreen();
+	return;
 }

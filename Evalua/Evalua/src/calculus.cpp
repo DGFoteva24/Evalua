@@ -14,9 +14,7 @@ void clearScreen();
 
 void calculus() {
 
-    string content = string(LAVANDER) + R"(
-
-+------------------------------+ )" + RESET + string(SKYBLUE) + R"(
+    string content = string(LAVANDER) + R"(+------------------------------+ )" + RESET + string(SKYBLUE) + R"(
 |           CALCULUS           | )" + RESET + string(LAVANDER) + R"(
 +------------------------------+
 
@@ -58,11 +56,6 @@ int(6x + 5) dx = 3x^2 + 5x + C
 
     cout << content;
 
-    cout << LAVANDER << "Press Enter to return to the menu..." << RESET;
-    char ch = _getch();
-    cout << ch << endl;
-    if (ch == '\r' || ch == '\n') {
-        clearScreen();
-        study();
-    }
+    cout << LAVANDER << "Press Enter to go back: " << RESET;
+    waitForEnterAndReturn();
 }

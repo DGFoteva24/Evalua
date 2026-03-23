@@ -14,9 +14,7 @@ void clearScreen();
 
 void combinatorics() {
 
-    string content = string(LAVANDER) + R"(
-
-+------------------------------+ )" + RESET + string(SKYBLUE) + R"(
+    string content = string(LAVANDER) + R"(+------------------------------+ )" + RESET + string(SKYBLUE) + R"(
 |        COMBINATORICS         | )" + RESET + string(LAVANDER) + R"(
 +------------------------------+
 
@@ -57,11 +55,6 @@ How many ways to choose 3 books out of 5?
 
     cout << content;
 
-    cout << LAVANDER << "Press Enter to return to the menu..." << RESET;
-    char ch = _getch();
-    cout << ch << endl;
-    if (ch == '\r' || ch == '\n') {
-        clearScreen();
-        study();
-    }
+    cout << LAVANDER << "\nPress Enter to go back: " << RESET;
+    waitForEnterAndReturn();
 }

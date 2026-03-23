@@ -30,6 +30,7 @@ int readNumericChoice() {
 }
 
 void mainMenu() {
+    while (true) {
     cout << LAVANDER << "+-------------------------------------------+" << RESET << endl;
     cout << SKYBLUE << "|            Welcome to Evalua!             |" << RESET << endl;
     cout << LAVANDER << "+-------------------------------------------+" << RESET << endl;
@@ -67,10 +68,16 @@ void mainMenu() {
     case 2: clearScreen(); test(); break;
     case 3: clearScreen(); homework(); break;
     case 4: clearScreen(); statistics(); break;
-    case 5: clearScreen(); firstMenu(); break;
+    case 5: clearScreen(); return; break;
     case 6: clearScreen(); exitProgram(); break;
     default:
-        cout << "Please pick a number! (1-6)" << endl;
-        break;
+        cout << SKYBLUE << "\nPlease pick a number! (1-4)\n\n" << RESET << "Press Enter to return to the menu...";
+        {
+            char _ch = _getch();
+            cout << _ch << endl;
+        }
+        clearScreen();
+        continue;
     }
+}
 }

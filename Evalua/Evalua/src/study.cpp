@@ -19,6 +19,16 @@ using namespace std;
 #define LAVANDER "\033[38;5;183m"
 #define SKYBLUE "\033[38;5;117m"
 
+// Blocks until the user presses Enter, then clears the screen and returns to the study contents.
+void waitForEnterAndReturn() {
+    while (true) {
+        char ch = _getch();
+        if (ch == '\r' || ch == '\n') break;
+    }
+    clearScreen();
+    study();
+}
+
 void study() {
     cout << LAVANDER
         << "     __________________   __________________\n"
@@ -52,7 +62,6 @@ void study() {
     }
 
     switch (choice) {
-    case 0: clearScreen(); mainMenu(); break;
     case 1: clearScreen(); trigonometry(); break;
     case 2: clearScreen(); geometry(); break;
     case 3: clearScreen(); algebra(); break;

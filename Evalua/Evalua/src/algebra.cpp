@@ -14,9 +14,7 @@ void clearScreen();
 
 void algebra() {
 
-    string content = string(LAVANDER) + R"(
-
-+------------------------------+ )" + RESET + string(SKYBLUE) + R"(
+    string content = string(LAVANDER) + R"(+------------------------------+ )" + RESET + string(SKYBLUE) + R"(
 |            ALGEBRA           | )" + RESET + string(LAVANDER) + R"(
 +------------------------------+
 
@@ -56,11 +54,6 @@ x = 2
 
     cout << content;
 
-    cout << LAVANDER << "Press Enter to go back: " << RESET;
-    char ch = _getch();
-    cout << ch << endl;
-    if (ch == '\r' || ch == '\n') {
-        clearScreen();
-        study();
-    }
+    cout << LAVANDER << "\nPress Enter to go back: " << RESET;
+    waitForEnterAndReturn();
 }

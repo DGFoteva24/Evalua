@@ -13,9 +13,7 @@ using namespace std;
 void clearScreen();
 void trigonometry() {
 
-    string content = string(LAVANDER) + R"(
-
-+--------------------------------+ )" + RESET + string(SKYBLUE) + R"(
+    string content = string(LAVANDER) + R"(+--------------------------------+ )" + RESET + string(SKYBLUE) + R"(
 |          TRIGONOMETRY          | )" + RESET + string(LAVANDER) + R"(
 +--------------------------------+
 
@@ -39,11 +37,6 @@ R"(sin(x)^2 + cos(x)^2 = 1
 
     cout << content;
 
-    cout << LAVANDER << "\nPress Enter to return to the menu..." << RESET;
-    char ch = _getch();
-    cout << ch << endl;
-    if (ch == '\r' || ch == '\n') {
-        clearScreen();
-        study();
-    }
+    cout << LAVANDER << "\nPress Enter to go back: " << RESET;
+    waitForEnterAndReturn();
 }
